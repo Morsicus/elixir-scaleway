@@ -30,4 +30,5 @@ be found at [https://hexdocs.pm/scaleway](https://hexdocs.pm/scaleway).
 - [] Endpoint API - Images
 - [] Endpoint API - IPs
 - [] Endpoint API - Security groups
+- [] Check pagination
 - [] Add tests (ByPass ? Exvcr ?)
