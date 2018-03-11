@@ -8,7 +8,14 @@ defmodule Scaleway.MixProject do
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: Coverex.Task],
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "Elixir-Scaleway",
+      docs: [
+        main: "Scaleway",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -22,6 +29,7 @@ defmodule Scaleway.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:coverex, "~> 1.4.10", only: :test},
       {:httpoison, "~> 1.0"},
       {:poison, "~> 3.1"}
