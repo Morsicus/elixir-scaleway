@@ -32,5 +32,9 @@ defmodule Scaleway do
     {status, res.reason}
   end
 
+  @doc """
+  Used to extract the body from format_answer/1.
+  More usable by the final user.
+  """
   def extract_body({_, body, _}), do: body
 end
