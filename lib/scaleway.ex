@@ -21,4 +21,16 @@ defmodule Scaleway do
 
   defp process_response_body(""), do: ""
   defp process_response_body(body), do: Poison.decode!(body, keys: :atoms)
+
+  @doc """
+  Format the Scaleway API answer as a tuple
+  """
+  def format_answer({status, res}) when status == :ok do
+    {status, res.body, res.headers}
+  end
+  def format_answer({status, res}) when status == :error do
+    {status, res.reason}
+  end
+
+  def extract_body({_, body, _}), do: body
 end
