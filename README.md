@@ -1,6 +1,6 @@
 # Scaleway
 
-**TODO: Add description**
+**Wrapper in elixir for the Scaleway API**
 
 ## Status
 
@@ -23,6 +23,7 @@ and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/scaleway](https://hexdocs.pm/scaleway).
 
 ## TODO
+- [] Add documentation on functions
 - [] Endpoint API - Servers
 - [] Endpoint API - Volumes
 - [] Endpoint API - Snapshots
