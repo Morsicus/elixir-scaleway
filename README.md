@@ -23,12 +23,12 @@ and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/scaleway](https://hexdocs.pm/scaleway).
 
 ## TODO
-[x] Add documentation on functions
-[] Endpoint API - Servers
-[] Endpoint API - Volumes
-[] Endpoint API - Snapshots
-[] Endpoint API - Images
-[] Endpoint API - IPs
-[] Endpoint API - Security groups
-[] Check pagination
-[] Add tests (ByPass ? Exvcr ?)
+- [x] Add documentation on functions
+- [ ] Endpoint API - Servers
+- [ ] Endpoint API - Volumes
+- [ ] Endpoint API - Snapshots
+- [ ] Endpoint API - Images
+- [ ] Endpoint API - IPs
+- [ ] Endpoint API - Security groups
+- [ ] Check pagination
+- [ ] Add tests (ByPass ? Exvcr ?)
