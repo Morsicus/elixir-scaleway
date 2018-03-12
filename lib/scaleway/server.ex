@@ -6,28 +6,34 @@ defmodule Scaleway.Server do
   @doc """
   List all servers.
   """
+  @spec list() :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
   def list() do
-    get(@endpoint) |> format_answer
+    get(@endpoint)
   end
 
   @doc """
   Similar to list/0 but with the body only.
   """
+  @spec list!() :: map()
   def list!() do
-    list() |> extract_body
+    list()
+    |> format_answer
+    |> extract_body
   end
 
   @doc """
   Create a new server.
   """
+  @spec create(map()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
   def create(data) do
-    post(@endpoint, data) |> format_answer
+    post(@endpoint, data)
   end
 
   @doc """
   Remove a specific server by its id.
   """
+  @spec remove(charlist()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
   def remove(id) do
-    delete("#{@endpoint}/#{id}") |> format_answer
+    delete("#{@endpoint}/#{id}")
   end
 end
