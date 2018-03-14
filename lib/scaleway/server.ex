@@ -22,6 +22,20 @@ defmodule Scaleway.Server do
   end
 
   @doc """
+  Retrieve informations on a specific server by its id.
+  """
+  @spec show(charlist()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
+  def show(id) do
+    get("#{@endpoint}/#{id}")
+  end
+  @spec show!(charlist()) :: map()
+  def show!(id) do
+    show(id)
+    |> format_answer
+    |> extract_body
+  end
+
+  @doc """
   Create a new server.
   """
   @spec create(map()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
