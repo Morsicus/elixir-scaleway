@@ -1,5 +1,5 @@
 defmodule Scaleway.Server do
-  import Scaleway, only: [get: 1, post: 2, delete: 1, format_answer: 1, extract_body: 1]
+  import Scaleway, only: [get: 1, post: 2, put: 2, delete: 1, format_answer: 1, extract_body: 1]
 
   @endpoint "/servers"
 
@@ -41,6 +41,20 @@ defmodule Scaleway.Server do
   @spec create(map()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
   def create(data) do
     post(@endpoint, data)
+  end
+
+  @doc """
+  Update informations on a specific server by its id.
+  """
+  @spec update(charlist(), map()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
+  def update(id, data) do
+    put("#{@endpoint}/#{id}", data)
+  end
+  @spec update!(charlist(), map()) :: map()
+  def update!(id, data) do
+    update(id, data)
+    |> format_answer
+    |> extract_body
   end
 
   @doc """
