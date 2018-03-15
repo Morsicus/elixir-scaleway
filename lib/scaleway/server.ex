@@ -42,6 +42,12 @@ defmodule Scaleway.Server do
   def create(data) do
     post(@endpoint, data)
   end
+  @spec create!(map()) :: map()
+  def create!(data) do
+    create(data)
+    |> format_answer
+    |> extract_body
+  end
 
   @doc """
   Update informations on a specific server by its id.
@@ -63,5 +69,11 @@ defmodule Scaleway.Server do
   @spec remove(charlist()) :: {:ok, HTTPoison.Response} | {:error, HTTPoison.Error}
   def remove(id) do
     delete("#{@endpoint}/#{id}")
+  end
+  @spec remove!(charlist()) :: map()
+  def remove!(id) do
+    remove(id)
+    |> format_answer
+    |> extract_body
   end
 end
