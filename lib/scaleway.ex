@@ -1,6 +1,6 @@
 defmodule Scaleway do
   @moduledoc """
-  Documentation for elixir-scaleway.
+  The Scaleway API allows you to manage servers and resources in a simple, programmatic way using conventional HTTP requests.
   """
 
   use HTTPoison.Base

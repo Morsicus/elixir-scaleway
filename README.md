@@ -4,16 +4,35 @@
 
 ## Status
 
-WIP - All endpoints are not currently implemented
+WIP
+
+[x] Compute endpoints
+[ ] Account endpoints
+[ ] Improve the library to be more developer-friendly
+
+## Documentation
+
+Available at [https://hexdocs.pm/scaleway](https://hexdocs.pm/scaleway). 
+
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `scaleway` to your list of dependencies in `mix.exs`:
+[Available in hex](https://hex.pm/packages/scaleway)
+
 
 ```elixir
 def deps do
   [
-    {:scaleway, "~> 0.1.0"}
+    {:scaleway, "~> 0.1.7"}
+  ]
+end
+```
+
+If you prefer you can add the dependencie using git directly
+
+```elixir
+def deps do
+  [
+    {:scaleway, git: "https://github.com/Morsicus/elixir-scaleway"}
   ]
 end
 ```
