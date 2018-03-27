@@ -6,9 +6,9 @@
 
 WIP
 
-[x] Compute endpoints
-[ ] Account endpoints
-[ ] Improve the library to be more developer-friendly
+- [x] Compute endpoints
+- [ ] Account endpoints
+- [ ] Improve the library to be more developer-friendly
 
 ## Documentation
 
