@@ -4,7 +4,7 @@ defmodule Scaleway.MixProject do
   def project do
     [
       app: :scaleway,
-      version: "0.1.7",
+      version: "0.1.8",
       elixir: "~> 1.6",
       description: "An Elixir wrapper for the Scaleway API",
       start_permanent: Mix.env() == :prod,
