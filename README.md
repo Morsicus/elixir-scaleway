@@ -7,6 +7,8 @@
 WIP
 
 - [x] Compute endpoints
+- [ ] Improve documentation with examples
+- [ ] Create an examples directory with common/real tasks
 - [ ] Account endpoints
 - [ ] Improve the library to be more developer-friendly
 
