@@ -1,6 +1,8 @@
 defmodule Scaleway.SecurityGroup.Rule do
   @moduledoc """
   Manage Security Rule used in Security groups
+
+  [Scaleway documentation API for security rules](https://developer.scaleway.com/#security-groups-manage-rules)
   """
 
   import Scaleway, only: [get: 1, post: 2, put: 2, delete: 1, format_answer: 1, extract_body: 1]
