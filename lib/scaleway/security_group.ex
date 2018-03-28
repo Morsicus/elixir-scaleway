@@ -1,6 +1,8 @@
 defmodule Scaleway.SecurityGroup do
   @moduledoc """
-  Manage Security groups.
+  Security groups are like a virtual firewall. With security groups, you can define rules that restrict network access to your servers.
+
+  [Scaleway documentation API for security groups](https://developer.scaleway.com/#security-groups)
   """
 
   import Scaleway, only: [get: 1, post: 2, put: 2, delete: 1, format_answer: 1, extract_body: 1]
